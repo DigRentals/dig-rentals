@@ -13,6 +13,15 @@ h1 {
 	font-size:14px;
 }
 
+#welcome-container {
+	margin:auto;
+	width:744px;
+	
+	@media (max-width: 767px) {
+		width:100%;
+	}
+}
+
 .email_signup_form {
 	background-color: #e4e4e4;
 	//border-radius: 5px;
