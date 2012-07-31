@@ -1,0 +1,45 @@
+<h1>Listing listings</h1>
+
+<table>
+  <tr>
+    <th>Address</th>
+    <th>Available</th>
+    <th>Photos</th>
+    <th>Rent</th>
+    <th>Bedrooms</th>
+    <th>Bathrooms</th>
+    <th>Square feet</th>
+    <th>Type</th>
+    <th>Pets</th>
+    <th>Lease type</th>
+    <th>Addtionalfeatures</th>
+    <th>Property desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @listings.each do |listing| %>
+  <tr>
+    <td><%= listing.address %></td>
+    <td><%= listing.available %></td>
+    <td><%= listing.photos %></td>
+    <td><%= listing.rent %></td>
+    <td><%= listing.bedrooms %></td>
+    <td><%= listing.bathrooms %></td>
+    <td><%= listing.square_feet %></td>
+    <td><%= listing.type %></td>
+    <td><%= listing.pets %></td>
+    <td><%= listing.lease_type %></td>
+    <td><%= listing.addtionalFeatures %></td>
+    <td><%= listing.property_desc %></td>
+    <td><%= link_to 'Show', listing %></td>
+    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
+    <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Listing', new_listing_path %>

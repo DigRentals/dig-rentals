@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DigRentals</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='body-wrapper'>
+<header>
+	<%= link_to "DigRentals", root_path, class: :logo %>
+</header>
+
+<div class="span10 center-wrapper">
+	<div class="content-wrapper">
+		<%= yield %>
+	</div>
+	
+	<div class="push"></div>
+</div>
+
+
+
+
+</div>
+<footer>
+	<p class="pull-right">PO Box 6402, Denver CO 80206 • <a href="tel:3035328888">303.532.8888</a> • DigRentals 2012 LLC</p>
+</footer>
+</body>
+</html>

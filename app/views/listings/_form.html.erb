@@ -1,0 +1,65 @@
+<%= form_for(@listing) do |f| %>
+  <% if @listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listing.errors.count, "error") %> prohibited this listing from being saved:</h2>
+
+      <ul>
+      <% @listing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :available %><br />
+    <%= f.check_box :available %>
+  </div>
+  <div class="field">
+    <%= f.label :photos %><br />
+    <%= f.text_field :photos %>
+  </div>
+  <div class="field">
+    <%= f.label :rent %><br />
+    <%= f.text_field :rent %>
+  </div>
+  <div class="field">
+    <%= f.label :bedrooms %><br />
+    <%= f.text_field :bedrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :bathrooms %><br />
+    <%= f.text_field :bathrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :square_feet %><br />
+    <%= f.text_field :square_feet %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :pets %><br />
+    <%= f.number_field :pets %>
+  </div>
+  <div class="field">
+    <%= f.label :lease_type %><br />
+    <%= f.number_field :lease_type %>
+  </div>
+  <div class="field">
+    <%= f.label :addtionalFeatures %><br />
+    <%= f.text_field :addtionalFeatures %>
+  </div>
+  <div class="field">
+    <%= f.label :property_desc %><br />
+    <%= f.text_field :property_desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

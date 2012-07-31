@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  address: 
+  available: false
+  photos: 
+  rent: 1.5
+  bedrooms: 1.5
+  bathrooms: 1.5
+  square_feet: 1.5
+  type: 1
+  pets: 1
+  lease_type: 1
+  addtionalFeatures: 
+  property_desc: MyString
+
+two:
+  address: 
+  available: false
+  photos: 
+  rent: 1.5
+  bedrooms: 1.5
+  bathrooms: 1.5
+  square_feet: 1.5
+  type: 1
+  pets: 1
+  lease_type: 1
+  addtionalFeatures: 
+  property_desc: MyString
