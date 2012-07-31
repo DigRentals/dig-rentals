@@ -117,6 +117,15 @@ footer {
 	p {
 		margin-right:25px;
 		color:white;
+		min-width:400px;
+		
+		@media (max-width: 767px) {
+			font-size:12px;
+			margin-right:25px;
+			color:white;
+			min-width:400px;
+		}
+		
 	}
 	
 	a {
