@@ -75,6 +75,7 @@ html, body {
 	font-size: 13px;
 	line-height: 18px;
 	height:100%;
+	padding:0px;
 }
 
 /*Opera Fix*/
@@ -88,6 +89,7 @@ body:before {
 
 #body-wrapper {
 	min-height:100%;
+	width:100%;
 }
 
 .center-wrapper {
@@ -100,9 +102,9 @@ body:before {
 
 .content-wrapper {
 	display:inline-block;
-	width: 780px;
 	background:#FEFFFE;
 	overflow:auto;
+	margin:0px;
 }
 
 footer {

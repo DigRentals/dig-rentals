@@ -19,8 +19,22 @@ h1 {
 	//-moz-border-radius: 5px;
 	//-webkit-border-radius: 5px;
 	border: 1px solid #89867F;
-	margin:25px 50px;
-
+	
+	margin:25px 0px 25px 50px;
+	width:300px;
+	display:inline-block;
+	
+	@media (max-width: 767px) {
+		background-color: #e4e4e4;
+		border: 1px solid #89867F;
+	
+		margin:25px auto;
+		width:300px;
+		display:block;
+		
+		overflow:auto;
+	}
+	
 	h3 {
 		padding:10px;
 	}
@@ -49,6 +63,15 @@ h1 {
 .feature-column {
 	margin:25px 25px;
 	float:right;
+	width:300px;
+	display:inline-block;
+	
+	@media (max-width: 767px) {
+		margin:25px auto;
+		float:none;
+		width:300px;
+		display:block;
+	}
 }
 
 #feature-create {
