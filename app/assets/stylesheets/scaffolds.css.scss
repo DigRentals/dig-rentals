@@ -48,25 +48,7 @@ div {
     font-size: 12px;
     list-style: square; } }
 
-
-header {
-	height:35px;
-	padding-top:15px;
-	
-	.logo {
-		color:white;
-		font-size:22px;
-		margin:15px;
-		&:visited {
-		  color: white; }
-		&:hover {
-			color:#aaa;
-			text-decoration:none;
-			background:transparent;
-		}
-	}
-}
-
+/* Mine */
 html, body {
 	margin:0px;
 	background: #f5f5f5 url(image_path('blueprint.png')) repeat left top;
@@ -87,6 +69,51 @@ body:before {
 	margin-top:-32767px;
 }
 
+header {
+	height:75px;
+	
+	.logo {
+		margin-top:15px;
+		color:white;
+		font-size:22px;
+		margin:15px;
+		display:inline-block;
+		&:visited {
+		  color: white; }
+		&:hover {
+			color:#aaa;
+			text-decoration:none;
+			background:transparent;
+		}
+	}
+	
+	.map-icon {
+		background: #fff url(image_path('placeholder_white.png')) no-repeat;
+		background-size:46px;
+		width:46px;
+		height:46px;
+		display:inline-block;
+		text-indent:-5000px;
+		position: absolute;
+		top: 15px;
+		left: 10px;
+	}
+	
+	.header-address {
+		width: 80%;
+		min-width: 266px;
+		display: inline-block;
+		padding-left: 71px;
+		
+		h1 {
+			color: white;
+			font-size: 26px;
+			text-align: center;
+			display: inline;
+		}
+	}
+}
+
 #body-wrapper {
 	min-height:100%;
 	width:100%;
@@ -103,7 +130,6 @@ body:before {
 .content-wrapper {
 	display:inline-block;
 	background:#FEFFFE;
-	overflow:auto;
 	margin:0px;
 }
 
@@ -123,7 +149,7 @@ footer {
 			font-size:12px;
 			margin-right:25px;
 			color:white;
-			min-width:400px;
+			float:none;
 		}
 		
 	}

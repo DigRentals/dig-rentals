@@ -23,6 +23,7 @@ class ListingsController < ApplicationController
   
   
   def sample_listing
+    @listingAddress = "1924 Pine Street, Boulder CO 80302"
   end
 
   # GET /listings/new

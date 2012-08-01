@@ -1,3 +1,123 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.listing {
+	width:400px;
+	margin:auto;
+	
+	h2 {
+		text-align:center;
+		font-weight:normal;
+	}
+	
+	#rent {
+		background:#4e83c4;
+		height:33px;		
+		div {
+			float:left;
+			position:relative;
+			left: 50%;
+		}
+		
+		span {
+			float: left;
+			position: relative;
+			left: -50%;
+		}
+		
+		img {
+			margin-top: -5px;
+			display: inline-block;
+		}
+
+		p {
+			padding-top:5px;
+			display:inline-block;
+			color:white;
+			font-size:18px;
+		}
+	}
+	
+	#carousel-single-image {
+		margin:15px 0px;
+		width:100%;
+		height:170px;
+		img {
+			margin:15px 0px 15px 20px;
+			border: 3px solid #4e83c4;
+		}
+	}
+	
+	#listing-details {
+		padding-left:20px;
+		
+		h3 {
+			color:#4e83c4;
+			margin:8px 0px;
+		}
+		
+		.basics {}
+		
+		.specifics {}
+		
+		li {
+			font-size:18px;
+			list-style:none;
+			height:30px;
+			padding-left:32px;
+			padding-top:2px;                
+		}
+		
+		//Sub List
+		.sub-list li {
+			font-size:14px;
+			height:20px;
+		}
+		
+		//Start adding icons!
+		.beds {
+			background:image_url('beds.png') top left no-repeat;
+			background-size: 21px 20px;
+		}
+		
+		.baths {
+			background:image_url('baths.png') top left no-repeat;
+			background-size: 21px 18px;
+		}
+		
+		.building-type {
+			background:image_url('building-type.png') top left no-repeat;
+			background-size: 30px 20px;
+			margin-left:-5px;
+			padding-left:37px;
+		}
+		
+		.highlights {
+			background:image_url('highlights.png') top left no-repeat;
+			background-size: 21px 20px;
+		}
+		
+		.key {
+			background:image_url('key.png') top left no-repeat;
+			background-size: 11px 24px;
+			margin-left:5px;
+			padding-left:27px;
+		}
+		
+		.lease-term {
+			background:image_url('lease-term.png') top left no-repeat;
+			background-size: 21px 20px;
+		}
+		
+		.pets {
+			background:image_url('pets.png') top left no-repeat;
+			background-size: 21px 20px;
+		}
+		
+		.square-feet {
+			background:image_url('square-feet.png') top left no-repeat;
+			background-size: 21px 20px;
+		}
+	}
+}

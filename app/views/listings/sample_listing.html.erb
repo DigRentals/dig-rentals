@@ -1,1 +1,92 @@
-<h1>Sample Listing!</h1>
+<div class="listing">
+	<h2>Fabulous House In A Great Location!</h2>
+	<div id='rent'>
+		<div>
+			<span>
+				<%= image_tag("placeholder_white.png", size: "19x19") %>
+				<p>$900 per month</p>
+			</span>
+		</div>
+	</div>
+
+	<div id="carousel-single-image" class="touchcarousel minimal-light">     
+	    <ul class="touchcarousel-container">
+	        <li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic1.jpeg", size: "124x124") %>
+	        </li>
+	
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic2.jpeg", size: "124x124") %>
+	        </li>
+	
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic3.jpeg", size: "124x124") %>
+	        </li>
+	
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic4.jpeg", size: "124x124") %>
+	        </li>
+	
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic1.jpeg", size: "124x124") %>
+	        </li>
+	
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic2.jpeg", size: "124x124") %>
+	        </li>
+	
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic3.jpeg", size: "124x124") %>
+	        </li>
+
+			<li class="touchcarousel-item">
+				<%= image_tag("sample_listing/pic4.jpeg", size: "124x124") %>
+	        </li>
+	    </ul>
+	</div>
+	
+	<div id="listing-details">
+		<div id="basics">
+			<h3>The Basics</h3>
+			<ul>
+				<li class="beds">3 beds</li>
+				<li class="baths">1 bath</li>
+				<li class="square-feet">1,200 Square Feet</li>
+				<li class="building-type">Townhouse</li>
+			</ul>
+		</div>
+		
+		<div id="specifics">
+			<h3>The Specifics</h3>
+			<ul>
+				<li class="pets">No Pets</li>
+				<li class="key">1 Year Lease</li>
+				<li class="highlights">Property Highlights:</li>
+				<ul class="sub-list">
+					<li>Fireplace</li>
+					<li>Washer/Dryer</li>
+					<li>Central Air</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+		
+</div>
+
+<script>
+	jQuery(function($) {
+	    $("#carousel-single-image").touchCarousel({
+			pagingNav: true,
+			scrollbar: false,
+			directionNavAutoHide: false,				
+			itemsPerMove: 1,				
+			loopItems: true,				
+			directionNav: false,
+			autoplay: false,
+			autoplayDelay: 2000,
+			useWebkit3d: true,
+			transitionSpeed: 400
+			
+	    });
+	});
+</script>

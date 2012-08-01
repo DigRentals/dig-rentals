@@ -7,10 +7,16 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 <div id='body-wrapper' class="container">
 <header>
-	<%= link_to "DigRentals", root_path, class: :logo %>
+	<% if @listingAddress %>
+		<%= link_to "Map", root_path, class: "map-icon" %>
+		<span class="header-address"><h1><%= @listingAddress %></h1></span>
+	<% else %>
+		<%= link_to "DigRentals", root_path, class: :logo %>
+	<% end %>
 </header>
 
 <div class="span12 center-wrapper">
