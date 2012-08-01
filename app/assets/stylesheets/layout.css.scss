@@ -92,14 +92,11 @@ header {
 			}
 		}
 		
-		.header-address {
-			width:67%;	
-			height:100%;
-			display:table;	
-	
+		
+		.header-address {	
+			display:block;
+			width:100%;
 			h1 {
-				display:table-cell;
-				vertical-align:middle;
 				color: white;
 				font-size: 20px;
 				text-align: center;
