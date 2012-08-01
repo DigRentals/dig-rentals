@@ -3,16 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .listing {
-	width:400px;
 	margin:auto;
+	overflow-y:auto;
+	overflow-x:hidden;
 	
 	h2 {
+		padding: 10px;
 		text-align:center;
 		font-weight:normal;
+		font-size:20px;
+		color:#4e84c4;
+		line-height:120%;
 	}
 	
 	#rent {
-		background:#4e83c4;
+		background:#4e84c4;
 		height:33px;		
 		div {
 			float:left;
@@ -27,15 +32,15 @@
 		}
 		
 		img {
-			margin-top: -5px;
+			margin-top: -8px;
 			display: inline-block;
 		}
 
 		p {
-			padding-top:5px;
+			padding-top:6px;
 			display:inline-block;
 			color:white;
-			font-size:18px;
+			font-size:23px;
 		}
 	}
 	
@@ -45,7 +50,13 @@
 		height:170px;
 		img {
 			margin:15px 0px 15px 20px;
-			border: 3px solid #4e83c4;
+			border: 2px solid #4e83c4;
+		}
+		
+		a {
+			&:hover {
+				background:transparent;
+			};
 		}
 	}
 	
@@ -55,6 +66,7 @@
 		h3 {
 			color:#4e83c4;
 			margin:8px 0px;
+			font-size:24px;
 		}
 		
 		.basics {}
@@ -62,7 +74,7 @@
 		.specifics {}
 		
 		li {
-			font-size:18px;
+			font-size:21px;
 			list-style:none;
 			height:30px;
 			padding-left:32px;
@@ -71,53 +83,113 @@
 		
 		//Sub List
 		.sub-list li {
-			font-size:14px;
+			font-size:18px;
 			height:20px;
 		}
 		
 		//Start adding icons!
 		.beds {
-			background:image_url('beds.png') top left no-repeat;
-			background-size: 21px 20px;
+			background:image_url('listing-icons/beds.png') top left no-repeat;
+			background-size: 20px 20px;
 		}
 		
 		.baths {
-			background:image_url('baths.png') top left no-repeat;
-			background-size: 21px 18px;
+			background:image_url('listing-icons/baths.png') bottom left no-repeat;
+			background-size: 20px 18px;
+			
+			height:18px;
+			margin-bottom:12px;
 		}
 		
 		.building-type {
-			background:image_url('building-type.png') top left no-repeat;
-			background-size: 30px 20px;
+			background:image_url('listing-icons/building-type.png') bottom left no-repeat;
+			background-size: 30px 17px;
 			margin-left:-5px;
 			padding-left:37px;
+
+			height:18px;
+			margin-bottom:12px;
 		}
 		
 		.highlights {
-			background:image_url('highlights.png') top left no-repeat;
-			background-size: 21px 20px;
-		}
-		
-		.key {
-			background:image_url('key.png') top left no-repeat;
-			background-size: 11px 24px;
-			margin-left:5px;
-			padding-left:27px;
+			background:image_url('listing-icons/highlights.png') bottom left no-repeat;
+			background-size: 18px 17px;
+			height:17px;
+			margin-bottom:8px;
 		}
 		
 		.lease-term {
-			background:image_url('lease-term.png') top left no-repeat;
-			background-size: 21px 20px;
+			background:image_url('listing-icons/lease-term.png') bottom left no-repeat;
+			background-size: 18px 19px;
+			height:19px;
+			margin-bottom:11px;
 		}
 		
 		.pets {
-			background:image_url('pets.png') top left no-repeat;
-			background-size: 21px 20px;
+			background:image_url('listing-icons/pets.png') bottom left no-repeat;
+			background-size: 17px 17px;
+			height:17px;
+			margin-bottom:13px;
 		}
 		
 		.square-feet {
-			background:image_url('square-feet.png') top left no-repeat;
-			background-size: 21px 20px;
+			background:image_url('listing-icons/square-feet.png') top left no-repeat;
+			background-size: 28px 26px;
+			margin-left:-5px;
+			padding-left:37px;
+			margin-top:-7px;
+			padding-top:7px;
 		}
+	}
+	
+	.line-dots {
+		background:image_url('listing-icons/description-dot.png') repeat-x;
+		background-size:16px 6px;
+		height:6px;
+		display:block;
+	}
+	
+	#listing-description {
+		margin:20px 0px;
+		p {
+			margin:0px;
+			padding:13px;
+			color:#231f20;
+			font-size:18px;
+			line-height:150%;
+		}
+		
+	}
+	
+	.phone-link {
+		text-align:center;
+		font-size:18px;
+		color:#4e84c4;
+		 
+		a {
+			color:#333;
+			
+			&:hover {
+				background:transparent;
+			}
+		}
+	}
+	
+	.contact-landlord {
+		font-size:26px;
+		text-align:center;
+		color:white;
+		height:53px;
+		width:273px;
+		margin:20px auto;
+		line-height:53px;
+		display:block;
+		
+		background:#4e83c4;
+		box-shadow:1px 2px 2px 1px #555; 
+		
+		&:hover {
+			text-decoration:none;
+		};
 	}
 }

@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1 {
-	margin-top:10px;
+	margin-top:0px;
+	padding:10px 0px;
 	text-align:center;
 }
 
@@ -28,10 +29,11 @@ h1 {
 	//-moz-border-radius: 5px;
 	//-webkit-border-radius: 5px;
 	border: 1px solid #89867F;
-	
+	padding-bottom:10px;
 	margin:25px 0px 25px 50px;
 	width:300px;
-	display:inline-block;
+	display:block;
+	float:left;
 	
 	@media (max-width: 767px) {
 		background-color: #e4e4e4;
@@ -40,6 +42,7 @@ h1 {
 		margin:25px auto;
 		width:300px;
 		display:block;
+		float:none;
 		
 		overflow:auto;
 	}
@@ -66,6 +69,18 @@ h1 {
 	.label {
 		font-family: "century gothic", Helvetica, Arial, sans-serif;
 		margin-left:10px;
+	}
+	
+	a {
+		color:#333;
+		margin-left:10px;
+		font-size:14px;
+		font-weight:bold;
+		
+		&:hover {
+			background:transparent;
+			color:#000;
+		}
 	}
 }
 
@@ -115,4 +130,3 @@ h1 {
 		padding-top:20px;
 	}
 }
-

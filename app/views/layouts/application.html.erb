@@ -11,12 +11,32 @@
 <body>
 <div id='body-wrapper' class="container">
 <header>
-	<% if @listingAddress %>
-		<%= link_to "Map", root_path, class: "map-icon" %>
-		<span class="header-address"><h1><%= @listingAddress %></h1></span>
-	<% else %>
+	<div id='header-normal' class='hidden-phone'>
 		<%= link_to "DigRentals", root_path, class: :logo %>
-	<% end %>
+	</div>
+	
+	<div id='header-mobile' class='visible-phone'>
+		<%= link_to root_path, class: :logo do %>
+			<div class='mobile-icon'>
+				Dig Rentals
+			</div>
+		<% end %>
+		
+		<% if @listingAddress %>
+		<%= link_to root_path, class: "map-link" do %>
+			<div class='map-icon'>
+				Map
+			</div>
+		<% end %>
+		
+		<span class="header-address">
+			<h1><%= @listingAddress %></h1>
+		</span>
+		
+		
+		
+		<% end %>
+	</div>
 </header>
 
 <div class="span12 center-wrapper">
@@ -29,7 +49,13 @@
 
 </div>
 <footer>
-	<p class="pull-right">PO Box 6402, Denver CO 80206 • <a href="tel:3035328888">303.532.8888</a> • DigRentals 2012 LLC</p>
+	<div id="footer-normal" class="hidden-phone">
+		<p class="pull-right hidden-phone">PO Box 6402, Denver CO 80206 • <a href="tel:3035328888">303.532.8888</a> • DigRentals 2012 LLC</p>
+	</div>
+	<div id="footer-mobile" class="visible-phone">
+		<%= image_tag("footer-logo-mobile.png", size: "279x101") %>
+	</div>
 </footer>
+
 </body>
 </html>

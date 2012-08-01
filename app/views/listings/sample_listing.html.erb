@@ -1,49 +1,51 @@
 <div class="listing">
-	<h2>Fabulous House In A Great Location!</h2>
+	<h2>Fabulous House In A Great Location! Check it out here!</h2>
 	<div id='rent'>
 		<div>
 			<span>
-				<%= image_tag("placeholder_white.png", size: "19x19") %>
+				<%= image_tag("price-tag.png", size: "21x20") %>
 				<p>$900 per month</p>
 			</span>
 		</div>
 	</div>
 
+<div class="liquid highlight html"></div>
 	<div id="carousel-single-image" class="touchcarousel minimal-light">     
 	    <ul class="touchcarousel-container">
 	        <li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic1.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic1-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic1.jpeg") %>
 	        </li>
 	
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic2.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic2-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic2.jpeg") %>
 	        </li>
 	
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic3.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic3-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic3.jpeg") %>
 	        </li>
 	
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic4.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic4-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic4.jpeg") %>
 	        </li>
 	
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic1.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic1-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic1.jpeg") %>
 	        </li>
 	
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic2.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic2-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic2.jpeg") %>
 	        </li>
 	
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic3.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic3-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic3.jpeg") %>
 	        </li>
 
 			<li class="touchcarousel-item">
-				<%= image_tag("sample_listing/pic4.jpeg", size: "124x124") %>
+				<%= link_to image_tag("sample_listing/pic4-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic4.jpeg") %>
 	        </li>
 	    </ul>
 	</div>
+	<div class="liquid endhighlight"></div>
 	
 	<div id="listing-details">
 		<div id="basics">
@@ -60,7 +62,7 @@
 			<h3>The Specifics</h3>
 			<ul>
 				<li class="pets">No Pets</li>
-				<li class="key">1 Year Lease</li>
+				<li class="lease-term">1 Year Lease</li>
 				<li class="highlights">Property Highlights:</li>
 				<ul class="sub-list">
 					<li>Fireplace</li>
@@ -70,6 +72,26 @@
 			</ul>
 		</div>
 	</div>
+	
+	
+	<div id="listing-description">
+		<div class="line-dots visible-phone"></div>
+			<p>
+			This house is pretty great for a
+			few reasons. Lorem ipsum dolor
+			sit amet, consectetur adipisicing
+			elit, sed do eiusmod tempor
+			incididunt ut labore et dolore
+			magna aliqua. Ut enim ad minim
+			veniam, quis nostrud exercitation
+			ullamco laboris nisi ut aliquip ex
+			ea commodo consequat.</p>
+		<div class="line-dots visible-phone"></div>
+	</div>
+	
+	<p class="phone-link">Landlord: <a href="tel:2767320507">276-732-0507</a></p>
+	<a href="mailto:andrew@digrentals.com" class="contact-landlord">Email The Landlord</a>
+	
 		
 </div>
 
@@ -89,4 +111,8 @@
 			
 	    });
 	});
+</script>
+
+<script>
+  $('#carousel-single-image a').touchGallery();
 </script>

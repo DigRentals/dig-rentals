@@ -55,7 +55,7 @@ html, body {
 	text-color:#333333;
 	font-family: "century gothic", Helvetica, Arial, sans-serif;
 	font-size: 13px;
-	line-height: 18px;
+	line-height:100%;
 	height:100%;
 	padding:0px;
 }
@@ -69,51 +69,6 @@ body:before {
 	margin-top:-32767px;
 }
 
-header {
-	height:75px;
-	
-	.logo {
-		margin-top:15px;
-		color:white;
-		font-size:22px;
-		margin:15px;
-		display:inline-block;
-		&:visited {
-		  color: white; }
-		&:hover {
-			color:#aaa;
-			text-decoration:none;
-			background:transparent;
-		}
-	}
-	
-	.map-icon {
-		background: #fff url(image_path('placeholder_white.png')) no-repeat;
-		background-size:46px;
-		width:46px;
-		height:46px;
-		display:inline-block;
-		text-indent:-5000px;
-		position: absolute;
-		top: 15px;
-		left: 10px;
-	}
-	
-	.header-address {
-		width: 80%;
-		min-width: 266px;
-		display: inline-block;
-		padding-left: 71px;
-		
-		h1 {
-			color: white;
-			font-size: 26px;
-			text-align: center;
-			display: inline;
-		}
-	}
-}
-
 #body-wrapper {
 	min-height:100%;
 	width:100%;
@@ -121,51 +76,27 @@ header {
 
 .center-wrapper {
 	float:none;
-	overflow:auto;
+	overflow-y:auto;
+	overflow-x:hidden;
 	padding-bottom:20px;
 	height:100%;
 	margin:auto;
+	
+	@media (max-width: 767px) {
+		padding-bottom:0px;
+	}
 }
 
 .content-wrapper {
-	display:inline-block;
+	display:block;
 	background:#FEFFFE;
 	margin:0px;
 }
 
-footer {
-	position:relative;
-	height:20px;
-	margin-top:-20px;
-	clear:both;
-	width:100%;
-	background-color: #285B95;
-	p {
-		margin-right:25px;
-		color:white;
-		min-width:400px;
-		
-		@media (max-width: 767px) {
-			font-size:12px;
-			margin-right:25px;
-			color:white;
-			float:none;
-		}
-		
-	}
-	
-	a {
-		color:#fff;
-		
-		&:hover {
-			text-decoration:none;
-			background:transparent;
-			color:#aaa;
-		}
-	}
-}
-
 .push {
-	height: 70px;
+	height: 20px;
+	@media (max-width: 767px) {
+		height:112px;
+	}
 }
 
