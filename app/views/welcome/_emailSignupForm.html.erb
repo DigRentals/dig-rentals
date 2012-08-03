@@ -1,4 +1,4 @@
-<h3>Sign up and we'll let you know when you can purchase our signs locally</h3>
+<h3>Sign up and we’ll get a QR coded sign to your local store.</h3>
 
 <%= form_tag signup_path, :class=> "form pull-right inline" do %>
 	 <% if flash[:error].present? %>
@@ -9,7 +9,7 @@
    	<span class="label label-success"><strong>Sweet! </strong><%= flash[:notice]%></span>
    <% end %>
    
-   <%= text_field_tag :email, nil, :class => 'text', :placeholder => 'Email' %>
-   <%= text_field_tag :zip, nil, :class => 'text', :placeholder => 'Zip Code' %>
-   <%= submit_tag "Sign Up", :class => "btn" %>
+   <%= text_field_tag :email, nil, :class => 'signup-text', :placeholder => 'Email' %>
+   <%= text_field_tag :zip, nil, :class => 'signup-text', :placeholder => 'Zip Code' %>
+   <%= submit_tag "Sign Up", :class => "signup-btn" %>
  <% end %>

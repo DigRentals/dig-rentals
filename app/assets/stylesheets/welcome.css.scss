@@ -2,13 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.dirty-border {
+	border-width:10px 10px 10px 10px;
+		-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+		-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+		border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+}
+
+#arrow-line {
+	position:absolute;
+	top:192px;
+	left:17%;
+	width:141px;
+	height:163px;
+	background:image_url("welcome/arrow-line.png") no-repeat;
+	display:none;
+}
+
 h1 {
-	margin-top:0px;
-	padding:10px 0px;
+	margin:23px auto 0px auto;
+	padding:5px;
+	color:white; 
 	text-align:center;
+	font-weight:normal;
+	font-size:42px;
+	height:40px;
+	width:500px;
+	
+	/*box-shadow: 2px 2px 10px 0px #222;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	
+	border-width:10px 10px 10px 10px;
+		-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+		-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+		border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+	*/
+	@media (max-width: 979px) {
+		width:100%;
+		padding:0px 0px 20px 0px;
+		margin:0px auto;
+		
+		box-shadow:none;
+		border-radius:none;
+		-moz-border-radius:none;
+		-webkit-border-radius:none;
+		border-width:0px;
+		-moz-border-image:none;
+		-webkit-border-image:none;
+		border-image:none;
+	}
 }
 
 .desc-text {
+	display:none;
 	text-align:center;
 	margin: 10px 25px;
 	font-size:14px;
@@ -17,53 +65,103 @@ h1 {
 #welcome-container {
 	margin:auto;
 	width:744px;
+	padding:20px;
 	
 	@media (max-width: 767px) {
 		width:100%;
+		padding:20px 0px 20px 0px;
 	}
 }
 
 .email_signup_form {
-	background-color: #e4e4e4;
-	//border-radius: 5px;
-	//-moz-border-radius: 5px;
-	//-webkit-border-radius: 5px;
-	border: 1px solid #89867F;
-	padding-bottom:10px;
+	padding:5px 0px 15px 0px;
 	margin:25px 0px 25px 50px;
-	width:300px;
+	width:286px;
+	height:304px;
 	display:block;
 	float:left;
 	
-	@media (max-width: 767px) {
-		background-color: #e4e4e4;
-		border: 1px solid #89867F;
+	box-shadow: 2px 2px 10px 0px #222;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 	
+	@media (max-width: 979px) {
 		margin:25px auto;
-		width:300px;
-		display:block;
+		padding-left:0px;
 		float:none;
-		
-		overflow:auto;
+		display:block;
 	}
 	
 	h3 {
-		padding:10px;
+		text-align:left;
+		padding:5px 10px 10px 10px;
+		font-weight:normal;
+		font-size:22px;
+		color:white;
 	}
+	::-webkit-input-placeholder  { color:#fff; }
+	input:-moz-placeholder { color:#fff; }
 	
-	.text {
-		width:250px;
-		padding:10px;
-		margin:10px;
+	.signup-text {
+		width:84%;
+		padding:5px;
+		margin:10px 10px 0px 8px;
+		font-size:18px;
+		color:white;
 		font-family: "century gothic", Helvetica, Arial, sans-serif;
+		background:transparent;
+		
+		border-width:10px 10px 10px 10px;
+			-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+			-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+			border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+	}
+	.signup-text {
+		width:84%;
+		padding:5px;
+		margin:10px 10px 0px 8px;
+		font-size:18px;
+		color:white;
+		font-family: "century gothic", Helvetica, Arial, sans-serif;
+		background:transparent;
+		
+		border-width:10px 10px 10px 10px;
+			-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+			-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+			border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
 	}
 	
-	.btn {
+	.signup-btn {
 		float:right;
-		margin:10px 19px 0px 0px;
-		padding:10px;
+		margin:10px 13px 0px 0px;
+		padding:5px;
 		width:100px;
 		font-family: "century gothic", Helvetica, Arial, sans-serif;
+		background-color:rgba(255,255,255,0.3);
+		
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		
+		font-size:18px;
+		font-weight:bold;
+		color:#333;
+		
+		box-shadow: 2px 2px 10px 0px #222;
+		
+		border-width:10px 10px 10px 10px;
+			-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+			-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+			border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+	
+		&:hover {
+			background-color:rgba(255,255,255,0.6);
+		}	
+		
+		&:active {
+			box-shadow: none;
+		};
 	}
 	
 	.label {
@@ -71,62 +169,139 @@ h1 {
 		margin-left:10px;
 	}
 	
+	form {
+		margin: 0px 0px 24px 0px;
+	}
+	
 	a {
-		color:#333;
-		margin-left:10px;
-		font-size:14px;
+		color:#fff;
+		margin:0px 10px;
+		font-size:16px;
 		font-weight:bold;
+		text-decoration:underline;
 		
 		&:hover {
 			background:transparent;
-			color:#000;
+			color:#fff;
 		}
 	}
 }
 
 .feature-column {
-	margin:25px 25px;
+	margin:20px 0px;
 	float:right;
-	width:300px;
-	display:inline-block;
+	width:350px;
+	display:block;
 	
-	@media (max-width: 767px) {
+	
+	@media (max-width: 979px) {
 		margin:25px auto;
 		float:none;
-		width:300px;
+		width:80%;
 		display:block;
 	}
 }
 
-#feature-create {
-	background: image_url('placeholder.png') top left no-repeat;
+#feature-sign {
+	background: image_url('placeholder-sketch.png') top left no-repeat;
 	background-size: 100px;
-	height:105px;
-	
+	margin-bottom:25px;
+	min-height:110px;
+
 	p {
+		padding-top:7px;
 		margin-left:110px;
-		padding-top:30px;
+		font-size:22px;
+		line-height:110%;
+		color:white;
+	}
+	
+	@media (max-width: 979px) and (min-width:767px) {
+		p {	padding-top:28px; }
+	}
+		
+	@media (max-width: 767px) {
+		background: image_url('placeholder-sketch.png') top center no-repeat;
+		background-size: 100px;
+		height:100%;
+		
+		p {
+			margin-left:0px;
+			text-align:center;
+			padding-top:110px;
+			font-size:22px;
+			line-height:110%;
+			color:white;
+		}
 	}
 }
 
-#feature-sign {
-	background: image_url('placeholder.png') top left no-repeat;
+#feature-create {
+	background: image_url('placeholder-sketch.png') top left no-repeat;
 	background-size: 100px;
-	height:105px;
+	margin-bottom:25px;
+	min-height:110px;
 	
 	p {
+		padding-top:7px;
 		margin-left:110px;
-		padding-top:20px;
+		font-size:22px;
+		line-height:110%;
+		color:white;
+	}
+	
+	@media (max-width: 979px) and (min-width:767px) {
+		p {	padding-top:28px; }
+	}
+	
+	@media (max-width: 767px) {
+		background: image_url('placeholder-sketch.png') top center no-repeat;
+		background-size: 100px;
+		height:100%;
+		
+		p {
+			margin-left:0px;
+			padding-top:110px;
+			font-size:22px;
+			line-height:110%;
+			color:white;
+			text-align:center;
+		}
 	}
 }
+
+
 
 #feature-manage {
-	background: image_url('placeholder.png') top left no-repeat;
+	background: image_url('placeholder-sketch.png') top left no-repeat;
 	background-size: 100px;
-	height:105px;
+	margin-bottom:25px;
+	min-height:110px;
 	
 	p {
+		padding-top:7px;
 		margin-left:110px;
-		padding-top:20px;
+		font-size:22px;
+		line-height:110%;
+		color:white;
+	}
+	
+	@media (max-width: 979px) and (min-width:767px) {
+		p {	padding-top:28px; }
+	}
+	
+	@media (max-width: 767px) {
+		background: image_url('placeholder-sketch.png') top center no-repeat;
+		background-size: 100px;
+		height:100%;
+
+		p {
+			margin-left:0px;
+			padding-top:110px;
+			font-size:22px;
+			line-height:110%;
+			color:white;
+			text-align:center;
+		}
 	}
 }

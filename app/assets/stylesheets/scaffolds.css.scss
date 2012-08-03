@@ -51,7 +51,7 @@ div {
 /* Mine */
 html, body {
 	margin:0px;
-	background: #f5f5f5 url(image_path('blueprint.png')) repeat left top;
+	background: #f5f5f5 url(image_path('tiny_grid.png')) repeat left top;
 	text-color:#333333;
 	font-family: "century gothic", Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -85,12 +85,6 @@ body:before {
 	@media (max-width: 767px) {
 		padding-bottom:0px;
 	}
-}
-
-.content-wrapper {
-	display:block;
-	background:#FEFFFE;
-	margin:0px;
 }
 
 .push {

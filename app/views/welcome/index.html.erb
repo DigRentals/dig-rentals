@@ -1,25 +1,28 @@
-
-<h1>Manage your Properties</h1>
-<p class="desc-text">We make it easy to manage all of your rental properties in one place. Buy one of our QR code enabled signs, and start using our tools to make your life easier.</p>
-<div class="row">
-	<div id='welcome-container'>
-		<div class='email_signup_form'>
-			<%= render 'emailSignupForm' %>
-			<%= link_to("Check out a sample listing!", sample_listing_path)%>
-		</div>
+<div class="content-wrapper span12">
+	<h1>Manage Your Properties</h1>
+	<div id="arrow-line"></div>
 	
-		<div class="feature-column">
-	
-			<div id="feature-create">
-				<p>Create a rental listing using our simple tools.</p>
+	<p class="desc-text">We make it easy to manage all of your rental properties in one place. Buy one of our QR code enabled signs, and start using our tools to make your life easier.</p>
+	<div class="row">
+		<div id='welcome-container'>
+			<div class='email_signup_form dirty-border'>
+				<%= render 'emailSignupForm' %>
+				<%= link_to("Check out a sample listing!", sample_listing_path)%>
 			</div>
 	
-			<div id="feature-sign">
-				<p>Link to your listing from our custom for rent sign using web technologies.</p>
-			</div>
+			<div class="feature-column">
 	
-			<div id="feature-manage">
-				<p>Manage all your properties from one central location. Turn the listing on and off.</p>
+				<div id="feature-sign">
+					<p>We start with a rental sign that ties your physical property into our digital system.</p>
+				</div>
+	
+				<div id="feature-create">
+					<p>Use our simple tools to create a listing that looks good on screens of all sizes.</p>
+				</div>
+	
+				<div id="feature-manage">
+					<p>Manage all your listings from one location, Turn them on and off faster than a light switch.</p>
+				</div>
 			</div>
 		</div>
 	</div>
