@@ -7,6 +7,23 @@
 		-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
 		-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
 		border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+		
+	//just top and bottom in mobile
+	@media (max-width: 767px) {
+		border-width: 10px 0px 10px 0px;
+	}
+}
+
+.dirty-border-shadow {
+	border-width:15px 15px 15px 15px;
+		-moz-border-image:image_url("welcome/dirty-border-with-shadow.png") 15 15 15 15 repeat repeat;
+		-webkit-border-image:image_url("welcome/dirty-border-with-shadow.png") 15 15 15 15 repeat repeat;
+		border-image:image_url("welcome/dirty-border-with-shadow.png") 15 15 15 15 repeat repeat;
+		
+	//just top and bottom in mobile
+	@media (max-width: 767px) {
+		border-width: 15px 0px 15px 0px;
+	}
 }
 
 #arrow-line {
@@ -23,29 +40,24 @@ h2 {
 	font-family: "century gothic", Helvetica, Arial, sans-serif;
 	color:white;
 	text-align:center;
-	width:100%;
-	padding:0px 0px 10px 0px;
+	padding:10px;
 	margin:0px auto;
-	
-	box-shadow:none;
-	border-radius:none;
-	-moz-border-radius:none;
-	-webkit-border-radius:none;
-	border-width:0px;
-	-moz-border-image:none;
-	-webkit-border-image:none;
-	border-image:none;
+	font-weight:normal;
+	font-size:26px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .banner {
-	padding:17px 50px;
-	background:image_url("welcome/banner-bg.png") no-repeat;
+	padding:17px 5px;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 	color:white;
 	font-size:22px;
-	margin:10px 20px;
-	width:819px;
+	margin:10px auto;
+	width:750px;
 	height:51px;
+	
+	background:transparent;
+	background: image_url("welcome/banner-bg.png") no-repeat; /* fallback */
 }
 
 .desc-text {
@@ -54,6 +66,7 @@ h2 {
 	margin: 10px 25px;
 	font-size:14px;
 }
+
 #main-artwork {
 	background:image_url("welcome/main-artwork.png") no-repeat;
 	width:1086px;
@@ -138,20 +151,22 @@ h2 {
 		width:100%;
 		padding:20px 0px 20px 0px;
 	}*/
-	width:100%;
 	margin-bottom:0px;
+	margin: 0px auto;
+	float:none;
+	padding:0px;
 }
 
 .email_signup_form {
-	padding:5px 0px 15px 0px;
-	margin:25px auto 15px auto;
+	padding:5px 0px 10px 0px;
+	margin:0px;
 	display:block;
 	float:none;
 	
-	box-shadow: 2px 2px 10px 0px #222;
-	border-radius: 10px;
+	//box-shadow: 2px 2px 10px 0px #222;
+	/*border-radius: 10px;
 	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+	-webkit-border-radius: 10px;*/
 	
 	@media (max-width: 979px) {
 		margin:25px auto;
@@ -171,63 +186,60 @@ h2 {
 	::-webkit-input-placeholder  { color:#fff; }
 	input:-moz-placeholder { color:#fff; }
 	
-	
+	form  {
+		padding:10px;
+		padding-right:50px;
+	}
 	.signup-text {
-		width:91%;
+		width:100%;
 		padding:5px;
-		margin:10px 40px 10px 10px;
+		margin:10px 0px 10px 0px;
 		font-size:18px;
 		color:white;
 		font-family: "century gothic", Helvetica, Arial, sans-serif;
 		background:transparent;
+		display:inline;
 		
 		border-width:10px 10px 10px 10px;
 			-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
 			-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
 			border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
-			
-		@media (max-width: 767px) {
-			width:86%;
-		}
 	}
 	
 	.signup-btn {
-		margin:10px 0px 0px 81%;
-		padding:5px;
-		width:100px;
+		margin:10px 0px 0px 80%;
+		float:none;
+		padding:7px 0px 14px 0px;
+		width:150px;
 		font-family: "century gothic", Helvetica, Arial, sans-serif;
-		background-color:rgba(255,255,255,0.3);
-		
-		border-radius: 10px;
-		-moz-border-radius: 10px;
-		-webkit-border-radius: 10px;
+		background:transparent;
+		//background-color:rgba(255,255,255,0.3);
 		
 		font-size:18px;
 		font-weight:bold;
-		color:#333;
+		color:#fff;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 		
-		box-shadow: 2px 2px 10px 0px #222;
-		
-		border-width:10px 10px 10px 10px;
-			-moz-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
-			-webkit-border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
-			border-image:image_url("welcome/dirty-border.png") 10 10 10 10 repeat repeat;
+		border-width:15px 15px 15px 15px;
+			-moz-border-image:image_url("welcome/dirty-border-with-shadow.png") 15 15 15 15 repeat repeat;
+			-webkit-border-image:image_url("welcome/dirty-border-with-shadow.png") 15 15 15 15 repeat repeat;
+			border-image:image_url("welcome/dirty-border-with-shadow.png") 15 15 15 15 repeat repeat;
 	
 		&:hover {
-			background-color:rgba(255,255,255,0.6);
+			//background-color:rgba(255,255,255,0.6);
 		}	
 		
 		&:active {
-			box-shadow: none;
+
 		};
 		
 		//Media Queries
 		@media (min-width: 1200px) {
-			margin-left:84%;
+			//margin-left:78%;
 		}
 		
 		@media (max-width: 767px) {
-			margin-left:69%;
+			//margin-left:58%;
 		}
 		
 		

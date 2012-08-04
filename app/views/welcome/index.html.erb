@@ -1,6 +1,6 @@
 <div class="content-wrapper span12">
 	<div class='hidden-tablet hidden-phone'>
-		<p class="banner">Here's the crazy thing about rental properties.  You've got to RENT them!</p>
+		<p class="banner">You don't want to rent to just anyone. Finding good renters starts here!</p>
 		<div id='main-artwork'>
 			<p class='feature-1'>
 				We start with a yard sign
@@ -27,11 +27,11 @@
 	</div>
 	
 	<div class='visible-tablet visible-phone'>
-		<h2>Here's the crazy thing about rental properties.  You've got to RENT them!</h2>
+		<h2>You don't want to rent to just anyone. Finding good renters starts here!</h2>
 	</div>
 	
-		<div id='welcome-container'>
-			<div class='email_signup_form dirty-border span8'>
+		<div id='welcome-container' class='dirty-border-shadow span8'>
+			<div class='email_signup_form'>
 				<h3>Sign up to be notified when our yard signs are available in your town! (Trust us, you’ll be glad you did!)</h3>
 
 				<%= form_tag signup_path, :class=> "form" do %>
@@ -45,7 +45,7 @@
 
 				   <%= text_field_tag :email, nil, :class => 'signup-text', :placeholder => 'Email' %>
 				   <%= text_field_tag :zip, nil, :class => 'signup-text', :placeholder => 'Zip Code' %>
-				   <%= submit_tag "Sign Up", :class => "signup-btn" %>
+				   <%= submit_tag "Sign Up", :class => "signup-btn dirty-border-shadow" %>
 				 <% end %>
 				
 				<!-- <%= link_to("Check out a sample listing!", sample_listing_path)%> -->
