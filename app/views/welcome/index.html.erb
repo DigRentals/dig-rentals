@@ -1,29 +1,74 @@
 <div class="content-wrapper span12">
-	<h1>Manage Your Properties</h1>
-	<div id="arrow-line"></div>
-	
-	<p class="desc-text">We make it easy to manage all of your rental properties in one place. Buy one of our QR code enabled signs, and start using our tools to make your life easier.</p>
-	<div class="row">
-		<div id='welcome-container'>
-			<div class='email_signup_form dirty-border'>
-				<%= render 'emailSignupForm' %>
-				<%= link_to("Check out a sample listing!", sample_listing_path)%>
-			</div>
-	
-			<div class="feature-column">
-	
-				<div id="feature-sign">
-					<p>We start with a rental sign that ties your physical property into our digital system.</p>
-				</div>
-	
-				<div id="feature-create">
-					<p>Use our simple tools to create a listing that looks good on screens of all sizes.</p>
-				</div>
-	
-				<div id="feature-manage">
-					<p>Manage all your listings from one location, Turn them on and off faster than a light switch.</p>
-				</div>
-			</div>
+	<div class='hidden-tablet hidden-phone'>
+		<p class="banner">Here's the crazy thing about rental properties.  You've got to RENT them!</p>
+		<div id='main-artwork'>
+			<p class='feature-1'>
+				We start with a yard sign
+				that is connected to your
+				online property listing
+			</p>
+			<p class='feature-2'>
+				Our easy-listing-creator
+				makes attractive listings
+				that look good on any
+				screen
+			</p>
+			<p class='feature-3'>
+				Manage all of your listings
+				from one place
+			</p>
+			<p class='feature-4'>
+				Activate and deactivate
+				listings with the click of a
+				button. Posting to Craigslist
+				is a breeze!
+			</p>
 		</div>
 	</div>
+	
+	<div class='visible-tablet visible-phone'>
+		<h2>Here's the crazy thing about rental properties.  You've got to RENT them!</h2>
+	</div>
+	
+		<div id='welcome-container'>
+			<div class='email_signup_form dirty-border span8'>
+				<h3>Sign up to be notified when our yard signs are available in your town! (Trust us, you’ll be glad you did!)</h3>
+
+				<%= form_tag signup_path, :class=> "form" do %>
+					 <% if flash[:error].present? %>
+				   	<span class="label label-important"><strong>Well shoot! </strong><%= flash[:error]%></span>
+				   <% end %>
+
+				   <% if flash[:notice].present? %>
+				   	<span class="label label-success"><strong>Sweet! </strong><%= flash[:notice]%></span>
+				   <% end %>
+
+				   <%= text_field_tag :email, nil, :class => 'signup-text', :placeholder => 'Email' %>
+				   <%= text_field_tag :zip, nil, :class => 'signup-text', :placeholder => 'Zip Code' %>
+				   <%= submit_tag "Sign Up", :class => "signup-btn" %>
+				 <% end %>
+				
+				<!-- <%= link_to("Check out a sample listing!", sample_listing_path)%> -->
+			</div>
+		</div>
+		
+		<div class='visible-tablet visible-phone mobile-features'>
+			<div class='feature-1'>
+				<p>We start with a yard sign that is connected to your online property listing</p>
+			</div>
+			
+			<div class='feature-2'>
+				<p>Our easy-listing-creator makes attractive listings that look good on any screen</p>
+			</div>
+			
+			<div class='feature-3'>
+				<p>Manage all of your listings from one place</p>
+			</div>
+			
+			<div class='feature-4'>
+				<p>Activate and deactivate listings with the click of a button. Posting to Craigslist is a breeze!</p>
+			</div>
+			
+			
+		</div>
 </div>
