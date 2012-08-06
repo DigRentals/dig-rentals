@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .listing {
-	margin:auto;
+	margin:60px auto;
 	overflow-y:auto;
 	overflow-x:hidden;
 	
@@ -12,12 +12,13 @@
 		text-align:center;
 		font-weight:normal;
 		font-size:20px;
-		color:#4e84c4;
+		color:#4d85c5;
 		line-height:120%;
+		text-shadow:none;
 	}
 	
 	#rent {
-		background:#4e84c4;
+		background:#4d85c5;
 		height:33px;		
 		div {
 			float:left;
@@ -50,7 +51,7 @@
 		height:170px;
 		img {
 			margin:15px 0px 15px 20px;
-			border: 2px solid #4e83c4;
+			border: 2px solid #4d85c5;
 		}
 		
 		a {
@@ -64,7 +65,7 @@
 		padding-left:20px;
 		
 		h3 {
-			color:#4e83c4;
+			color:#4d85c5;
 			margin:8px 0px;
 			font-size:24px;
 		}
