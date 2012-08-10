@@ -1,4 +1,4 @@
-<div class="listing">
+<div class="listing-mobile visible-phone">
 	<h2>Fabulous House In A Great Location! Check it out here!</h2>
 	<div id='rent'>
 		<div>
@@ -27,55 +27,35 @@
 			<li class="touchcarousel-item">
 				<%= link_to image_tag("sample_listing/pic4-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic4.jpeg") %>
 	        </li>
-	
-			<li class="touchcarousel-item">
-				<%= link_to image_tag("sample_listing/pic1-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic1.jpeg") %>
-	        </li>
-	
-			<li class="touchcarousel-item">
-				<%= link_to image_tag("sample_listing/pic2-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic2.jpeg") %>
-	        </li>
-	
-			<li class="touchcarousel-item">
-				<%= link_to image_tag("sample_listing/pic3-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic3.jpeg") %>
-	        </li>
-
-			<li class="touchcarousel-item">
-				<%= link_to image_tag("sample_listing/pic4-thumb.jpeg", size: "124x124"), image_url("sample_listing/pic4.jpeg") %>
-	        </li>
 	    </ul>
 	</div>
 	<div class="liquid endhighlight"></div>
 	
 	<div id="listing-details">
-		<div id="basics">
-			<h3>The Basics</h3>
-			<ul>
-				<li class="beds">3 beds</li>
-				<li class="baths">1 bath</li>
-				<li class="square-feet">1,200 Square Feet</li>
-				<li class="building-type">Townhouse</li>
-			</ul>
-		</div>
-		
-		<div id="specifics">
-			<h3>The Specifics</h3>
-			<ul>
-				<li class="pets">No Pets</li>
-				<li class="lease-term">1 Year Lease</li>
-				<li class="highlights">Property Highlights:</li>
-				<ul class="sub-list">
-					<li>Fireplace</li>
-					<li>Washer/Dryer</li>
-					<li>Central Air</li>
-				</ul>
-			</ul>
-		</div>
+		<h3>The Basics</h3>
+		<ul>
+			<li class="beds">4 Beds</li>
+			<li class="baths">3 Baths</li>
+			<li class="square-feet">2,100 Square Feet</li>					
+			<li class="building-type">Single Family Home</li>
+		</ul>
+
+		<h3>The Specifics</h3>
+		<ul class="bullet-field">
+			<li class="square-bullet">12 Month Lease</li>
+			<li class="square-bullet">Dogs / Cats Okay</li>
+			<li class="square-bullet">Laundry In Unit</li>
+			<li class="square-bullet">Garage</li>
+			<li class="square-bullet">Back Yard</li>
+			<li class="square-bullet">Secured Parking</li>
+			<li class="square-bullet">Secured Building</li>
+			<li class="square-bullet">Swimming Pool / Hot Tub</li>
+		</ul>
 	</div>
 	
 	
 	<div id="listing-description">
-		<div class="line-dots visible-phone"></div>
+		<div class="line-dots"></div>
 			<p>
 			This house is pretty great for a
 			few reasons. Lorem ipsum dolor
@@ -86,7 +66,7 @@
 			veniam, quis nostrud exercitation
 			ullamco laboris nisi ut aliquip ex
 			ea commodo consequat.</p>
-		<div class="line-dots visible-phone"></div>
+		<div class="line-dots"></div>
 	</div>
 	
 	<p class="phone-link">Landlord: <a href="tel:2767320507">276-732-0507</a></p>
@@ -95,6 +75,79 @@
 		
 </div>
 
+<div class="listing-desktop hidden-phone">
+	<div class="row-fluid">
+		<div class="span6">
+			<h2>Cute Bungalow In Great Neighborhood</h2>
+			<div id='rent'>
+				<p>$900 per month</p>
+			</div>
+	
+			<p>
+					This house is pretty great for a
+					few reasons. Lorem ipsum dolor
+					sit amet, consectetur adipisicing
+					elit, sed do eiusmod tempor
+					incididunt ut labore et dolore
+					magna aliqua. Ut enim ad minim
+					veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex
+					ea commodo consequat.
+			</p>
+	
+			<div id="listing-details">
+				<h3>The Basics</h3>
+				<ul>
+					<li class="beds">4 Beds</li>
+					<li class="baths">3 Baths</li>
+					<li class="square-feet">2,100 Square Feet</li>					
+					<li class="building-type">Single Family Home</li>
+				</ul>
+		
+				<h3>The Specifics</h3>
+				<ul class="bullet-field">
+					<li class="square-bullet">12 Month Lease</li>
+					<li class="square-bullet">Dogs / Cats Okay</li>
+					<li class="square-bullet">Laundry In Unit</li>
+					<li class="square-bullet">Garage</li>
+					<li class="square-bullet">Back Yard</li>
+					<li class="square-bullet">Secured Parking</li>
+					<li class="square-bullet">Secured Building</li>
+					<li class="square-bullet">Swimming Pool / Hot Tub</li>
+				</ul>
+		
+				<!-- <div class="dirty-border-blue-shadow">
+					<p class="phone-link">Landlord: <a href="tel:2767320507">276-732-0507</a></p>
+					<a href="mailto:andrew@digrentals.com" class="contact-landlord">Email The Landlord</a>
+				</div> -->
+		
+			</div>
+		</div>
+
+		<div class="span6">
+			<div id="main-image-container">
+				<%= image_tag("sample_listing/pic1.jpeg") %>
+			</div>
+			
+			<div class="thumbnails">
+				<div>
+					<span>
+						<%= link_to image_tag("sample_listing/pic1-thumb.jpeg", size: "73x59"), image_url("sample_listing/pic1.jpeg"), class: "thumbnail selected" %>
+						<%= link_to image_tag("sample_listing/pic2-thumb.jpeg", size: "73x59"), image_url("sample_listing/pic2.jpeg"), class: "thumbnail" %>
+						<%= link_to image_tag("sample_listing/pic3-thumb.jpeg", size: "73x59"), image_url("sample_listing/pic3.jpeg"), class: "thumbnail" %>
+						<%= link_to image_tag("sample_listing/pic4-thumb.jpeg", size: "73x59"), image_url("sample_listing/pic4.jpeg"), class: "thumbnail" %>
+					</span>
+				</div>
+			</div>
+			
+			<div class="contact-box">
+				<h3>Property Contact Info</h3>
+				<p class="phone-link">Phone: <a href="tel:2767320507">555-555-0507</a></p>
+				<a href="mailto:info@digrentals.com" class="email-link">Email The Landlord</a>
+			</div>
+		</div>
+	</div>
+</div>
 <script>
 	jQuery(function($) {
 	    $("#carousel-single-image").touchCarousel({

@@ -1,9 +1,32 @@
 // Place all the styles related to the listings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.dirty-border-blue-shadow {
+	border-width:15px 15px 15px 15px;
+		-moz-border-image:image_url("welcome/dirty-border-blue-shadow.png") 15 15 15 15 repeat repeat;
+		-webkit-border-image:image_url("welcome/dirty-border-blue-shadow.png") 15 15 15 15 repeat repeat;
+		border-image:image_url("welcome/dirty-border-blue-shadow.png") 15 15 15 15 repeat repeat;
+		
+	//just top and bottom in mobile
+	@media (max-width: 767px) {
+		border-width: 15px 0px 15px 0px;
+	}
+}
 
-.listing {
-	margin:60px auto;
+.dirty-border-blue {
+	border-width:10px 10px 10px 10px;
+		-moz-border-image:image_url("welcome/dirty-border-blue.png") 10 10 10 10 repeat repeat;
+		-webkit-border-image:image_url("welcome/dirty-border-blue.png") 10 10 10 10 repeat repeat;
+		border-image:image_url("welcome/dirty-border-blue.png") 10 10 10 10 repeat repeat;
+		
+	//just top and bottom in mobile
+	@media (max-width: 767px) {
+		border-width: 10px 0px 10px 0px;
+	}
+}
+
+.listing-mobile {
+	margin:0px auto 10px auto;
 	overflow-y:auto;
 	overflow-x:hidden;
 	
@@ -12,13 +35,13 @@
 		text-align:center;
 		font-weight:normal;
 		font-size:20px;
-		color:#4d85c5;
+		color:#174d7b;
 		line-height:120%;
 		text-shadow:none;
 	}
 	
 	#rent {
-		background:#4d85c5;
+		background:#174d7b;
 		height:33px;		
 		div {
 			float:left;
@@ -51,7 +74,7 @@
 		height:170px;
 		img {
 			margin:15px 0px 15px 20px;
-			border: 2px solid #4d85c5;
+			border: 2px solid #174d7b;
 		}
 		
 		a {
@@ -65,9 +88,10 @@
 		padding-left:20px;
 		
 		h3 {
-			color:#4d85c5;
+			color:#174d7b;
 			margin:8px 0px;
 			font-size:24px;
+			font-weight:normal;
 		}
 		
 		.basics {}
@@ -79,7 +103,8 @@
 			list-style:none;
 			height:30px;
 			padding-left:32px;
-			padding-top:2px;                
+			padding-top:2px;    
+			color:#174d7b;            
 		}
 		
 		//Sub List
@@ -104,10 +129,9 @@
 		
 		.building-type {
 			background:image_url('listing-icons/building-type.png') bottom left no-repeat;
-			background-size: 30px 17px;
-			margin-left:-5px;
-			padding-left:37px;
-
+			background-size: 34px 18px;
+			margin-left:-10px;
+			padding-left:42px;
 			height:18px;
 			margin-bottom:12px;
 		}
@@ -141,6 +165,13 @@
 			margin-top:-7px;
 			padding-top:7px;
 		}
+		
+		.square-bullet {
+			background:image_url('listing-icons/square-bullet.png') bottom left no-repeat;
+			background-size: 12px 12px;
+			height:16px;
+			margin-bottom:14px;
+		}
 	}
 	
 	.line-dots {
@@ -155,20 +186,21 @@
 		p {
 			margin:0px;
 			padding:13px;
-			color:#231f20;
+			color:#174d7b;
 			font-size:18px;
 			line-height:150%;
+			text-align:center;
 		}
 		
 	}
 	
 	.phone-link {
 		text-align:center;
-		font-size:18px;
-		color:#4e84c4;
+		font-size:22px;
+		color:#174d7b;
 		 
 		a {
-			color:#333;
+			color:#4e86c7;
 			
 			&:hover {
 				background:transparent;
@@ -186,11 +218,284 @@
 		line-height:53px;
 		display:block;
 		
-		background:#4e83c4;
+		background:#174d7b;
 		box-shadow:1px 2px 2px 1px #555; 
 		
 		&:hover {
 			text-decoration:none;
 		};
+	}
+}
+
+.listing-desktop {
+	margin:26px 0px 38px 0px;
+	overflow:hidden;
+	
+	.row-fluid {
+		padding:0px 15px;
+		width:auto;
+	}
+	.span6 {
+		padding:0px 15px;
+	}
+	
+	h2 {
+		padding: 10px 0px 0px 0px;
+		text-align:center;
+		font-size:32px;
+		color:#174d7b;
+		line-height:120%;
+		text-shadow:none;
+		font-weight:normal;
+	}
+	
+	h3 {
+		padding-left: 10px;
+		text-align:left;
+		font-weight:normal;
+		font-size:20px;
+		color:#4d85c5;
+		line-height:120%;
+		text-shadow:none;
+	}
+	
+	p {
+		margin:0px;
+		padding:0px 5px;
+		font-size:16px;
+		line-height:140%;
+		color:#174d7b;
+	}
+	
+	#rent {
+		margin:12px 0px;
+		background:#174d7b;
+		height:54px;
+
+		p {
+			padding:3px;
+			text-align:center;
+			color:white;
+			font-size:32px;
+		}
+	}
+	
+
+	
+	#listing-details {	
+		margin:25px 0px 0px 5px;
+		ul {
+			margin:30px 0px 5px 5px;
+		}	
+		
+		.bullet-field {
+			margin:15px 0px 15px 5px;
+		}
+		
+		h3 {
+			padding:5px 0px;
+			padding-left: 0px;
+			text-align:left;
+			font-weight:normal;
+			font-size:20px;
+			color:#174d7b;
+			line-height:120%;
+			text-shadow:none;
+			border-color: transparent transparent #174d7b;
+			border-style: solid;
+			border-width: 1px;
+		}
+		
+		li {
+			color:#174d7b;
+			font-size:16px;
+			list-style:none;
+			height:50px;
+			padding-left:47px;
+			padding-top:10px; 
+			padding-right:25px; 
+			display:inline-block;   
+			width:146px;    
+			margin-top:-10px;       
+		}
+		
+		//Sub List
+		.sub-list li {
+			font-size:18px;
+			height:20px;
+		}
+		
+		//Start adding icons!
+		.beds {
+			background:image_url('listing-icons/beds.png') top left no-repeat;
+			background-size: 36px 35px;
+		}
+		
+		.baths {
+			background:image_url('listing-icons/baths.png') bottom left no-repeat;
+			background-size: 36px 30px;
+			
+			height:25px;
+			margin-bottom:25px;
+		}
+		
+		.building-type {
+			background:image_url('listing-icons/building-type.png') top left no-repeat;
+			background-size: 44px 24px;
+			
+			margin-left:-8px;
+			padding-left:55px;
+			padding-top:4px;
+			width:156px;
+			
+		}
+		
+		.highlights {
+			background:image_url('listing-icons/highlights.png') bottom left no-repeat;
+			background-size: 18px 17px;
+			height:17px;
+			margin-bottom:8px;
+		}
+		
+		.lease-term {
+			background:image_url('listing-icons/lease-term.png') bottom left no-repeat;
+			background-size: 18px 19px;
+			height:19px;
+			margin-bottom:11px;
+		}
+		
+		.pets {
+			background:image_url('listing-icons/pets.png') bottom left no-repeat;
+			background-size: 17px 17px;
+			height:17px;
+			margin-bottom:13px;
+		}
+		
+		.square-feet {
+			background:image_url('listing-icons/square-feet.png') top left no-repeat;
+			background-size: 44px 41px;
+
+			margin-left:-8px;
+			padding-left:55px;
+		}
+		
+		.square-bullet {
+			background:image_url('listing-icons/square-bullet.png') bottom left no-repeat;
+			background-size: 12px 12px;
+		
+			margin-top:0px;
+			height:29px;
+			padding-left:27px;
+			height:15px;
+			width: 171px;
+		}
+	}
+	
+	#main-image-container {
+		width:100%;
+		overflow:visible;
+		
+		img {
+			border:5px solid #174d7b;
+			display:block;
+			margin:auto;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+			-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+		}
+	}
+	
+	.thumbnails {
+		display:block;
+		margin:20px auto;
+		div {
+			float:left;
+			position:relative;
+			left: 50%;
+		}
+		
+		span {
+			float: left;
+			position: relative;
+			left: -50%;
+		}
+		
+		.thumbnail {
+			margin:0px 5px;
+			display:inline-block;
+			&:hover {
+				border-color:#555;
+			};			
+		}
+		a {
+			&:hover {
+				background:transparent;
+			};
+		}
+		
+		.selected {
+
+			border-color: #174d7b;
+		}
+	}
+	
+	.phone-link {
+		text-align:center;
+		font-size:18px;
+		color:#4e84c4;
+		 
+		a {
+			color:#333;
+			
+			&:hover {
+				background:transparent;
+			}
+		}
+	}
+	
+	.contact-box {
+		width:320px;
+		height:127px;
+		border:1px solid #174d7b;
+		display:block;
+		margin:auto;
+		-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+		-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+		
+		h3 {
+			padding:5px 5px;
+			margin:10px 15px;
+			text-align:center;
+			font-weight:bold;
+			font-size:24px;
+			color:#174d7b;
+			line-height:120%;
+			text-shadow:none;
+			border-color: transparent transparent #174d7b;
+			border-style: solid;
+			border-width: 1px;   
+		}
+		
+		a {
+			text-align:center;
+			color:#4e86c7;
+			font-size:18px;
+
+		}
+		
+		.phone-link {
+			color:#174d7b;
+			font-size:18px;
+			text-align:center;
+			margin-bottom:5px;
+		}
+		
+		.email-link {
+			display:block;
+		}
 	}
 }

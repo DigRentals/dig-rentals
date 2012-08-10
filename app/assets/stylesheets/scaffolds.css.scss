@@ -51,7 +51,8 @@ div {
 /* Mine */
 html, body {
 	margin:0px;
-	background: #f5f5f5 url(image_path('tiny_grid.png')) repeat left top;
+	//background: #f5f5f5 url(image_path('tiny_grid.png')) repeat left top;
+	background:#fff;
 	text-color:#333333;
 	font-family: "century gothic", Helvetica, Arial, sans-serif;
 	font-size: 13px;
@@ -93,4 +94,8 @@ body:before {
 		height:112px;
 	}
 }
-
+a {
+	&:hover {
+		background:transparent;
+	};
+}

@@ -17,7 +17,18 @@
 				Dig Rentals
 			</div>
 		<% end %>
-		<%= link_to_function "Sign up", 'scroll_to("#welcome-container")', class: "sign-up btn" %>
+		
+		<div id="header-controls">
+			<% if @listingAddress %>
+			<span class="header-address">
+				<h1><%= @listingAddress %></h1>
+			</span>
+			<% end %>
+		</div>
+		
+		<% if !@listingAddress %>
+			<%= link_to_function "Sign up", 'scroll_to("#welcome-container")', class: "sign-up btn" %>
+		<% end %>
 	</div>
 	
 	<div id='header-mobile' class='visible-phone'>
@@ -28,7 +39,7 @@
 		<% end %>
 		
 		<% if @listingAddress %>
-		<%= link_to root_path, class: "map-link" do %>
+		<%= link_to "http://maps.google.com/maps?q=" + Rack::Utils.escape(@listingAddress), class: "map-link" do %>
 			<div class='map-icon'>
 				Map
 			</div>
@@ -44,7 +55,7 @@
 	</div>
 </header>
 
-<div class="span12 center-wrapper">
+<div class="center-wrapper">
 		<%= yield %>
 	<div class="push"></div>
 </div>
