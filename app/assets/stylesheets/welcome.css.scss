@@ -12,10 +12,15 @@
 	overflow-y:auto;
 	overflow-x:hidden;
 	
+	@media (max-width: 767px) {
+		min-width:0px;
+	}
+	
 	.row-fluid {
 		padding:0px 15px;
 		width:auto;
 	}
+	
 	.span7 {
 		margin:0px;
 		padding:0px 0px 0px 15px;
@@ -26,6 +31,18 @@
 		padding:0px 0px 0px 15px;
 		max-width:579px;
 		min-width:490px;
+		
+		@media (max-width: 767px) {
+			min-width:0px;
+			max-width:767px;
+			width:100%;
+			padding:0px 15px;
+		}
+		
+		a {
+			color:#231f20;
+			font-size:14px;
+		}
 	}
 	
 	.email_signup_form {
@@ -38,13 +55,24 @@
 			margin-bottom:10px;
 			text-align:left;
 			font-weight:normal;
-			font-size:22px;
+			font-size:28px;
 			color:#231f20;
+			width:100%;
+			display:block;
+			
+			@media (max-width: 767px) {
+				text-align:center;
+				margin-bottom:20px;
+			}
 		}
 	
 		p {
 			font-size:16px;
 			color:#231f20;
+			
+			@media (max-width: 767px) {
+				text-align:center;
+			}
 		}
 	//	::-webkit-input-placeholder  { color:#fff; }
 	//	input:-moz-placeholder { color:#fff; }
@@ -63,12 +91,23 @@
 			color:#231f20;
 			font-family: "century gothic", Helvetica, Arial, sans-serif;
 			background:transparent;
+			
+			@media (max-width: 767px) {
+				text-align:center;
+			}
 		}
 	
 		.btn {
 			padding:12px 12px;
 			font-family: "century gothic", Helvetica, Arial, sans-serif;
 			font-size:18px;
+			
+			@media (max-width: 767px) {
+				float:none;
+				margin:10px auto;
+				display:block;
+				padding:20px 30px;
+			}
 		}
 		
 		//Media Queries
@@ -89,16 +128,25 @@
 	
 	.feature-header {
 		background:#174d7b;
-		margin-top:140px;
+		margin-top:110px;
 		height:61px;
-		padding-top:12px;
+		padding-top:24px;
 		
+		@media (max-width: 767px) {
+			margin-top:0px;
+			padding-bottom:10px;
+		}
+
 		h2 {
 			color:white;
 			font-weight:normal;
 			text-align:center;
 			text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 6px;
 			font-size:28px;
+			
+			@media (max-width: 767px) {
+				font-size:26px;
+			}
 		}
 		
 		p {
@@ -110,15 +158,24 @@
 			text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 6px;
 			-webkit-transform: rotate(-10deg); 
 			-moz-transform: rotate(-10deg);
+			
+			@media (max-width: 767px) {
+				font-size:14px;
+				margin-top:4px;
+			}
 		}
 	}
 	
 	#main-artwork {
 		background:#174d7b;
-		height:119px;
 		margin:0px 30px;
 		padding:40px 0px 0px 25px;
-	
+		overflow-y:auto;
+
+		@media (max-width: 767px) {
+			margin:0px;
+		}
+
 		p {
 			font-size:14px;
 			color:white;
@@ -126,23 +183,21 @@
 			line-height:120%;
 			//width:170px;
 			width:14%;
-			height:59px;
+			min-height:59px;
 			display:inline-block;
 			padding:15px 0px 0px 127px;
-			margin-right:10px;
+			margin:0px 10px 15px 0px;
 			float:left;
 		}
 	
 		.feature-1 {
 			background:image_url("welcome/feature-1.png") no-repeat;
 			padding:0px 0px 0px 100px;
-			width:12%
+			width:12%			
 		}
 	
 		.feature-2 {
-			background:image_url("welcome/feature-2.png") no-repeat bottom left;
-			height:64px;
-			margin-top:-10px;
+			background:image_url("welcome/feature-2.png") no-repeat top left;
 			padding:0px 0px 0px 117px;
 		}
 	
@@ -152,11 +207,53 @@
 		}
 	
 		.feature-4 {
-			background:image_url("welcome/feature-4.png") no-repeat bottom left;
+			background:image_url("welcome/feature-4.png") no-repeat top left;
 			padding:0px 0px 0px 132px;
-			height:65px;
-			margin-top:-12px;
 			width:13%;
+		}
+	}
+	
+	#main-artwork-mobile {
+		background:#174d7b;
+		padding:0px 0px 0px 0px;
+		margin:0px;
+		overflow-y:auto;
+		width:100%;
+
+		p {
+			font-size:18px;
+			color:white;
+			text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 6px;
+			line-height:120%;
+			display:block;
+			padding:70px 10px 30px 10px;
+			text-align:center;
+		}
+		
+		a {
+			color:white;
+			font-size:18px;
+			text-align:center;
+			margin:20px 0px 30px 0px;
+			display:block;
+			text-decoration:underline;
+		}
+	
+		.feature-1 {
+			background:image_url("welcome/feature-1-mobile.png") no-repeat top center;			
+		}
+	
+		.feature-2 {
+			background:image_url("welcome/feature-2-mobile.png") no-repeat top center;
+		}
+	
+		.feature-3 {
+			background:image_url("welcome/feature-3-mobile.png") no-repeat top center;
+		}
+	
+		.feature-4 {
+			background:image_url("welcome/feature-4-mobile.png") no-repeat top center;
+			padding:50px 10px 30px 10px;
 		}
 	}
 }

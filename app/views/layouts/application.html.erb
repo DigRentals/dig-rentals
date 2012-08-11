@@ -20,9 +20,33 @@
 		
 		<div id="header-controls">
 			<% if @listingAddress %>
-			<span class="header-address">
-				<h1><%= @listingAddress %></h1>
-			</span>
+				<span class="header-address">
+					<h1><%= @listingAddress %></h1>
+				</span>
+			<% else %>
+				<%= link_to root_path, class: :search do %>
+					<div class='search-icon'>
+						Login
+					</div>
+				<% end %>
+			
+				<%= link_to root_path, class: :login do %>
+					<div class='login-icon'>
+						Login
+					</div>
+				<% end %>
+				
+				<%= link_to root_path, class: :faq do %>
+					<div class='faq-icon'>
+						Q and A FAQs
+					</div>
+				<% end %>
+				
+				<%= link_to root_path, class: :account do %>
+					<div class='account-icon'>
+						Create Account
+					</div>
+				<% end %>
 			<% end %>
 		</div>
 	</div>
@@ -34,19 +58,16 @@
 			</div>
 		<% end %>
 		
-		<% if @listingAddress %>
-		<%= link_to "http://maps.google.com/maps?q=" + Rack::Utils.escape(@listingAddress), class: "map-link" do %>
-			<div class='map-icon'>
-				Map
-			</div>
-		<% end %>
-		
-		<span class="header-address">
-			<h1><%= @listingAddress %></h1>
-		</span>
-		
-		
-		
+		<% if false #@listingAddress %>
+			<%= link_to "http://maps.google.com/maps?q=" + Rack::Utils.escape(@listingAddress), class: "map-link" do %>
+				<div class='map-icon'>
+					Map
+				</div>
+			<% end %>
+			
+			<span class="header-address">
+				<h1><%= @listingAddress %></h1>
+			</span>
 		<% end %>
 	</div>
 </header>

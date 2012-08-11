@@ -2,7 +2,7 @@
 	<div class="row-fluid">
 		<div class="span5">
 			<div class='email_signup_form'>
-				<h3>Welcome To Landlord Easy Street.</h3>
+				<h3 id="responsive_headline">Welcome To Landlord Easy Street</h3>
 				<p>Enter your email address to be notified when signs are available in your area.</p>
 
 				<%= form_tag signup_path, :class=> "form" do %>
@@ -14,28 +14,32 @@
 				   	<span class="label label-success"><strong>Sweet! </strong><%= flash[:notice]%></span>
 				   <% end %>
 
-				   <%= text_field_tag :email, nil, :class => 'text', :placeholder => 'Email' %>
+				   <%= text_field_tag :email, nil, :class => 'text', :type => "email", :placeholder => 'Email' %>
 				   <%= text_field_tag :zip, nil, :class => 'text', :placeholder => 'Zip Code' %>
 				   <%= submit_tag "Sign Up", :class => "btn btn-primary pull-right" %>
 				 <% end %>
 
-				<!-- <%= link_to("Check out a sample listing!", sample_listing_path)%> -->
+				<%= link_to("Check out a sample listing!", sample_listing_path, class: "hidden-phone")%>
 			</div>
 			
-			<div class="feature-header">
+			<div class="feature-header hidden-phone">
 				<h2>Dig Rentals For Landlords</h2>
 				<p>(is awesome!)</p>
 			</div>
 		</div>
 		
-		<div class="span7">
+		<div class="span7 hidden-phone">
 			<div class="video-container">
 			</div>
 		</div>
 	</div>
 	
-	<div class='hidden-phone'>
-		<div id='main-artwork'>
+	<div>
+		<div class="feature-header visible-phone">
+			<h2>Dig Rentals For Landlords</h2>
+			<p>(is awesome!)</p>
+		</div>
+		<div id='main-artwork' class= 'hidden-phone'>
 			<p class='feature-1'>
 				Login and link your sign to your property listing online
 			</p>
@@ -48,6 +52,23 @@
 			<p class='feature-4'>
 				Activate and deactivate listings with the click of a button. Posting to Craigslist is a breeze!
 			</p>
-		</div>		
+		</div>	
+		
+		<div id='main-artwork-mobile' class='visible-phone'>
+			<p class='feature-1'>
+				Login and link your sign to your property listing online
+			</p>
+			<p class='feature-2'>
+				In minutes, make attractive listings that look good on any screen and are sure to catch the eye of renters
+			</p>
+			<p class='feature-3'>
+				Edit and manage all of your listings from one place with only one email address
+			</p>
+			<p class='feature-4'>
+				Activate and deactivate listings with the click of a button. Posting to Craigslist is a breeze!
+			</p>
+			
+			<%= link_to("Check out a sample listing!", sample_listing_path)%>
+		</div>	
 	</div>
 </div>

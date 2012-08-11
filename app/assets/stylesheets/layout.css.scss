@@ -7,7 +7,7 @@ header {
 	#header-normal {
 		height:140px;
 		background:url(image_path('header.png')) repeat-x;
-		
+			
 		.logo {
 			position:absolute;
 			top:8px;
@@ -28,24 +28,71 @@ header {
 			}
 		}
 		
+		.search {
+			float:left;
+			margin-left:427px;
+			margin-top:6px;
+			text-indent:-5000px;
+			
+			.search-icon {
+				background:url(image_path('header/search.png')) no-repeat;
+				display:block;
+				width:152px;
+				height:66px;
+			}
+		}
+		
+		.login {
+			float:left;
+			margin-left:28px;
+			margin-top:6px;
+			text-indent:-5000px;
+			
+			.login-icon {
+				background:url(image_path('header/login.png')) no-repeat;
+				display:block;
+				width:152px;
+				height:66px;
+			}
+		}
+		
+		.faq {
+			float:left;
+			margin-left:28px;
+			margin-top:6px;
+			text-indent:-5000px;
+			
+			.faq-icon {
+				background:url(image_path('header/faq.png')) no-repeat;
+				display:block;
+				width:152px;
+				height:66px;
+			}
+		}
+		
+		.account {
+			float:left;
+			text-indent:-5000px;
+			margin-top:6px;
+			margin-left:28px;
+			
+			.account-icon {
+				background:url(image_path('header/account.png')) no-repeat;
+				display:block;
+				width:213px;
+				height:66px;
+			}
+		}
+		
 		#header-controls {
 			position:absolute;
 			top:36px;
 			background:#174d7b;
 			height:78px;
 			width:100%;
+			min-width:1188px;
 			z-index:1;
 			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
-		}
-		
-		.sign-up {
-			float:right;
-			display:block;
-			height:30px;
-			width:70px;
-			font-size:18px;
-			margin:17px 20px 0px 0px;
-			padding:10px 10px 0px 10px;
 		}
 		
 		.map-icon {
@@ -76,32 +123,20 @@ header {
 	}
 
 	#header-mobile {
-		height:59px;
-		background:#174d7b;
+		height:57px;
+		background:url(image_path('mobile-header.png')) repeat-x;
 		
 		.logo {
-			width:44px;
-			height:37px;
-			
 			float: left;
-			padding: 11px 9px;
-			border-right: 2px groove #174d7b;
+			padding: 9px 15px;
 			
 			display:block;
 			text-indent:-5000px;
 			
-			&:hover {
-				color:#aaa;
-				text-decoration:none;
-				background:#285B95;
-			}
-			
 			.mobile-icon {
 				background:url(image_path('mobile-home.png')) no-repeat;
-				background-size:42px 33px;
-
-				//width:46px;
-				height:46px;
+				width:138px;
+				height:38px;
 				display:block;
 			}
 		}
@@ -114,6 +149,7 @@ header {
 			h1 {
 				color: white;
 				font-size: 20px;
+				font-weight:normal;
 				text-align: center;
 				line-height:100%;
 				margin:0px;
@@ -150,12 +186,12 @@ header {
 /* FOOTER */
 footer {
 	position:relative;
-	height:157px;
-	margin-top:-157px;
+	height:211px;
+	margin-top:-211px;
 	clear:both;
 	width:100%;
 	
-	background:url(image_path('header.png')) repeat;
+	background:url(image_path('footer.png')) repeat;
 	
 	/*background:#4d85c5;
 	background-image:-webkit-gradient(linear, left top, left bottom, from(#4d85c5), to(#2d6499));
@@ -172,8 +208,6 @@ footer {
 	}
 	  
 	@media (max-width: 767px) {
-		height:112px;
-		margin-top:-112px;
 		font-size:12px;
 		margin-right:25px;
 		color:white;
@@ -191,37 +225,37 @@ footer {
 	}
 	
 	#footer-normal {
-		min-width:1062px;
+		min-width:1223px;
 		display:block;
 		
 		.footer-logo {
 			background:url(image_path('buildings.png'));
-			width:408px;
-			height:162px;
-			margin:-13px 31px;
+			width:503px;
+			height:199px;
+			margin:9px 14px;
 			float:right;
 		}
 		
 		.footer-text {
 			background:url(image_path('footer-text-bg.png'));
-			width:438px;
-			height:31px;
+			width:655px;
+			height:46px;
 			float:left;
-			margin: 117px 31px;
+			margin: 151px 9px 0px 9px;
 			
 			span {
 				float:left;
 				color:white;
-				font-size:14px;
 				display:block;
-				padding:8px 14px;
+				padding:15px 14px;
+				font-size:20px;
 			}
 			
 			a {
 				float:right;
 				color:white;
-				font-size:14px;
-				padding:8px 14px;
+				padding:15px 14px;
+				font-size:20px;
 				&:hover {
 					background:transparent;
 					text-decoration:underline;
@@ -233,7 +267,7 @@ footer {
 	#footer-mobile {
 		padding:6px 0px;
 		img {
-			margin:0px auto;
+			margin:60px auto 0px auto;
 			display:block;
 		}
 	}
