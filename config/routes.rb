@@ -2,6 +2,7 @@ DigRentals::Application.routes.draw do
 
   resources :listings
   match 'sample_listing' => 'listings#sample_listing'
+  match '103' => 'listings#sample_listing'
   resources :addresses
 
   get "welcome/index"
