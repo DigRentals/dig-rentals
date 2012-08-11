@@ -25,10 +25,6 @@
 			</span>
 			<% end %>
 		</div>
-		
-		<% if !@listingAddress %>
-			<%= link_to_function "Sign up", 'scroll_to("#welcome-container")', class: "sign-up btn" %>
-		<% end %>
 	</div>
 	
 	<div id='header-mobile' class='visible-phone'>
@@ -63,7 +59,12 @@
 </div>
 <footer>
 	<div id="footer-normal" class="hidden-phone">
-		<p class="pull-right hidden-phone">#002012 | PO Box 6402 | Denver CO 80206 | <a href="tel:3035328888">303.532.8888</a> | <a href="mailto:info@digrentals.com">info@digrentals.com</a></p>
+		<div class="footer-logo">
+		</div>
+		<div class="footer-text">
+			<span>© Copyright 2012 Dig Rentals LLC</span>
+			<a href="mailto:info@digrentals.com">info@digrentals.com</a>
+		</div>
 	</div>
 	<div id="footer-mobile" class="visible-phone">
 		<%= image_tag("footer-logo-mobile.png", size: "279x101") %>

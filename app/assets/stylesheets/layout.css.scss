@@ -3,17 +3,14 @@ header {
 	background:transparent;
 	z-index: 999;
 	width:100%;
-	@media (max-width: 767px) {
-//		height:59px;
-	}
 
 	#header-normal {
-		height:166px;
-		background:url(image_path('header.png')) repeat;
+		height:140px;
+		background:url(image_path('header.png')) repeat-x;
 		
 		.logo {
 			position:absolute;
-			top:22px;
+			top:8px;
 			left:13px;
 			text-indent:-5000px;
 			z-index:3;
@@ -33,11 +30,12 @@ header {
 		
 		#header-controls {
 			position:absolute;
-			top:47px;
+			top:36px;
 			background:#174d7b;
 			height:78px;
 			width:100%;
 			z-index:1;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
 		}
 		
 		.sign-up {
@@ -87,7 +85,7 @@ header {
 			
 			float: left;
 			padding: 11px 9px;
-			border-right: 2px groove #333;
+			border-right: 2px groove #174d7b;
 			
 			display:block;
 			text-indent:-5000px;
@@ -128,7 +126,7 @@ header {
 			
 			float: right;
 			padding: 9px 0px 8px 19px;
-			border-left: 2px groove #333;
+			border-left: 2px groove #174d7b;
 			
 			display:block;
 			text-indent:-5000px;
@@ -152,26 +150,25 @@ header {
 /* FOOTER */
 footer {
 	position:relative;
-	height:20px;
-	margin-top:-20px;
+	height:157px;
+	margin-top:-157px;
 	clear:both;
 	width:100%;
 	
-	//background:url(image_path('header.png')) repeat-x bottom left;
 	background:#4d85c5;
-	background-image:-webkit-gradient(linear, left top, left bottom, from(#4d85c5), to(#285993)); /* Saf4+, Chrome */
-	background-image:-webkit-linear-gradient(top, #4d85c5, #285993); /* Chrome 10+, Saf5.1+ */
-	background-image: -moz-linear-gradient(top, #4d85c5, #285993); /* FF3.6+ */
-	background-image: -ms-linear-gradient(top, #4d85c5, #285993); /* IE10 */
-	background-image: -o-linear-gradient(top, #4d85c5, #285993); /* Opera 11.10+ */
-	background-image:  linear-gradient(top, #4d85c5, #285993); /* W3C */
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#4d85c5), to(#2d6499)); /* Saf4+, Chrome */
+	background-image:-webkit-linear-gradient(top, #4d85c5, #2d6499); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient(top, #4d85c5, #2d6499); /* FF3.6+ */
+	background-image: -ms-linear-gradient(top, #4d85c5, #2d6499); /* IE10 */
+	background-image: -o-linear-gradient(top, #4d85c5, #2d6499); /* Opera 11.10+ */
+	background-image:  linear-gradient(top, #4d85c5, #2d6499); /* W3C */
 	
 	p {
 		margin-right:25px;
 		color:white;
 		min-width:400px;
 	}
-	
+	  
 	@media (max-width: 767px) {
 		height:112px;
 		margin-top:-112px;
@@ -192,9 +189,44 @@ footer {
 	}
 	
 	#footer-normal {
-		margin-top:25px;
-		height:20px;
 		display:block;
+		
+		.footer-logo {
+			background:url(image_path('buildings.png'));
+			width:459px;
+			height:162px;
+			margin-left:31px;
+			margin-top:-13px;
+			float:left;
+		}
+		
+		.footer-text {
+			background:url(image_path('footer-text-bg.png'));
+			width:438px;
+			height:31px;
+			float:right;
+			margin-top:117px;
+			margin-right:31px;
+			
+			span {
+				float:left;
+				color:white;
+				font-size:14px;
+				display:block;
+				padding:8px 14px;
+			}
+			
+			a {
+				float:right;
+				color:white;
+				font-size:14px;
+				padding:8px 14px;
+				&:hover {
+					background:transparent;
+					text-decoration:underline;
+				};
+			}
+		}
 	}
 	
 	#footer-mobile {
@@ -208,31 +240,16 @@ footer {
 
 /* CONTENT */
 .content-wrapper {
-	box-shadow: 0 -5px 20px rgba(0, 0, 0, 1);
-	-webkit-box-shadow: 0 -5px 20px rgba(0, 0, 0, 1);
-	
-	//special freakin stuff
-	background: #4d85c5;
-//	background-image: url(image_path('blueprint.png')) repeat; /* fallback */
-	background-image: url(image_path('blueprint.png')), -webkit-gradient(radial, left top, left bottom, from(#4d85c5), to(#285993)); /* Saf4+, Chrome */
-	background-image: url(image_path('blueprint.png')), -webkit-radial-gradient(top, #4d85c5, #285993); /* Chrome 10+, Saf5.1+ */
-	background-image: url(image_path('blueprint.png')),    -moz-radial-gradient(top, #4d85c5, #285993); /* FF3.6+ */
-	background-image: url(image_path('blueprint.png')),     -ms-radial-gradient(top, #4d85c5, #285993); /* IE10 */
-	background-image: url(image_path('blueprint.png')),      -o-radial-gradient(top, #4d85c5, #285993); /* Opera 11.10+ */
-	background-image: url(image_path('blueprint.png')),         radial-gradient(top, #4d85c5, #285993); /* W3C */
+	background: #fff;
 	
 	margin:0px auto 15px auto;
-	padding:90px 0px 20px 0px;
+	padding:34px 0px 0px 0px;
 	display:block;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	
 	overflow-y:auto;
 	overflow-x:hidden;
 
 	
 	@media (max-width: 767px) {
-		//margin:40px 10px 15px 10px;
 	}
 }

@@ -1,38 +1,9 @@
-<div class="content-wrapper span12">
-	<div class='hidden-tablet hidden-phone'>
-		<p class="banner">You don't want to rent to just anyone. Finding good renters starts here!</p>
-		<div id='main-artwork'>
-			<p class='feature-1'>
-				We start with a yard sign
-				that is connected to your
-				online property listing
-			</p>
-			<p class='feature-2'>
-				Our easy-listing-creator
-				makes attractive listings
-				that look good on any
-				screen
-			</p>
-			<p class='feature-3'>
-				Manage all of your listings
-				from one place
-			</p>
-			<p class='feature-4'>
-				Activate and deactivate
-				listings with the click of a
-				button. Posting to Craigslist
-				is a breeze!
-			</p>
-		</div>
-	</div>
-	
-	<div class='visible-tablet visible-phone'>
-		<h2>You don't want to rent to just anyone. Finding good renters starts here!</h2>
-	</div>
-	
-		<div id='welcome-container' class='dirty-border-shadow span8'>
+<div class="welcome-wrapper">
+	<div class="row-fluid">
+		<div class="span5">
 			<div class='email_signup_form'>
-				<h3>Sign up to be notified when our yard signs are available in your town! (Trust us, you’ll be glad you did!)</h3>
+				<h3>Welcome To Landlord Easy Street.</h3>
+				<p>Enter your email address to be notified when signs are available in your area.</p>
 
 				<%= form_tag signup_path, :class=> "form" do %>
 					 <% if flash[:error].present? %>
@@ -43,32 +14,40 @@
 				   	<span class="label label-success"><strong>Sweet! </strong><%= flash[:notice]%></span>
 				   <% end %>
 
-				   <%= text_field_tag :email, nil, :class => 'signup-text', :placeholder => 'Email' %>
-				   <%= text_field_tag :zip, nil, :class => 'signup-text', :placeholder => 'Zip Code' %>
-				   <%= submit_tag "Sign Up", :class => "signup-btn dirty-border-shadow" %>
+				   <%= text_field_tag :email, nil, :class => 'text', :placeholder => 'Email' %>
+				   <%= text_field_tag :zip, nil, :class => 'text', :placeholder => 'Zip Code' %>
+				   <%= submit_tag "Sign Up", :class => "btn btn-primary pull-right" %>
 				 <% end %>
-				
+
 				<!-- <%= link_to("Check out a sample listing!", sample_listing_path)%> -->
+			</div>
+			
+			<div class="feature-header">
+				<h2>Dig Rentals For Landlords</h2>
+				<p>(is awesome!)</p>
 			</div>
 		</div>
 		
-		<div class='visible-tablet visible-phone mobile-features'>
-			<div class='feature-1'>
-				<p>We start with a yard sign that is connected to your online property listing</p>
+		<div class="span7">
+			<div class="video-container">
 			</div>
-			
-			<div class='feature-2'>
-				<p>Our easy-listing-creator makes attractive listings that look good on any screen</p>
-			</div>
-			
-			<div class='feature-3'>
-				<p>Manage all of your listings from one place</p>
-			</div>
-			
-			<div class='feature-4'>
-				<p>Activate and deactivate listings with the click of a button. Posting to Craigslist is a breeze!</p>
-			</div>
-			
-			
 		</div>
+	</div>
+	
+	<div class='hidden-phone'>
+		<div id='main-artwork'>
+			<p class='feature-1'>
+				Login and link your sign to your property listing online
+			</p>
+			<p class='feature-2'>
+				In minutes, make attractive listings that look good on any screen and are sure to catch the eye of renters
+			</p>
+			<p class='feature-3'>
+				Edit and manage all of your listings from one place with only one email address
+			</p>
+			<p class='feature-4'>
+				Activate and deactivate listings with the click of a button. Posting to Craigslist is a breeze!
+			</p>
+		</div>		
+	</div>
 </div>
