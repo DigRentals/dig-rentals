@@ -1,3 +1,11 @@
+<!-- <div class="wrapper">
+	
+	<%= form_tag register_code_path :class=> 'form' do %>
+		<%= text_field_tag :customCode, nil, :class => 'text pull-left', :placeholder => 'Sign Code' %>
+		<%= submit_tag "Create Listing", :class => "btn btn-primary pull-left" %>
+	<% end %>
+</div> -->
+
 <div class="welcome-wrapper">
 	<div class="row-fluid">
 		<div class="span5">
@@ -18,7 +26,7 @@
 				   <%= text_field_tag :zip, nil, :class => 'text', :placeholder => 'Zip Code' %>
 				   <%= submit_tag "Sign Up", :class => "btn btn-primary pull-right" %>
 				 <% end %>
-
+				
 				<%= link_to("Check out a sample listing!", sample_listing_path, class: "hidden-phone")%>
 			</div>
 			

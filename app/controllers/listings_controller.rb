@@ -29,14 +29,22 @@ class ListingsController < ApplicationController
   # GET /listings/new
   # GET /listings/new.json
   def new
-    @listing = Listing.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @listing }
+    #@listing = Listing.new
+    if session[:listing_id]
+      @listing = Listing.find(session[:listing_id])
+    else
+      redirect_to root_url, notice: "Invalid Listing ID"
     end
   end
-
+  
+  def new2
+    if session[:listing_id]
+      @listing = Listing.find(session[:listing_id])
+    else
+      redirect_to root_url, notice: "Invalid Listing ID"
+    end
+  end
+  
   # GET /listings/1/edit
   def edit
     @listing = Listing.find(params[:id])
@@ -45,17 +53,9 @@ class ListingsController < ApplicationController
   # POST /listings
   # POST /listings.json
   def create
-    @listing = Listing.new(params[:listing])
-
-    respond_to do |format|
-      if @listing.save
-        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
-        format.json { render json: @listing, status: :created, location: @listing }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @listing.errors, status: :unprocessable_entity }
-      end
-    end
+    @listing = Listing.create(customCode: params[:customCode])
+    session[:listing_id] = @listing.id
+    redirect_to new_listing_path
   end
 
   # PUT /listings/1

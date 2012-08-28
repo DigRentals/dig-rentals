@@ -125,13 +125,14 @@ header {
 	#header-mobile {
 		height:57px;
 		background:url(image_path('mobile-header.png')) repeat-x;
-		
+
 		.logo {
 			float: left;
 			padding: 9px 15px;
 			
 			display:block;
 			text-indent:-5000px;
+			margin:0px;
 			
 			.mobile-icon {
 				background:url(image_path('mobile-home.png')) no-repeat;
@@ -183,6 +184,27 @@ header {
 	}
 }
 
+.creds {
+	float:right;
+	margin:23px 15px;
+	color:white;
+	font-size:16px;
+	
+	a {
+		color:white;
+		
+		&:visited {
+			color:white;
+		};
+	}
+}
+
+.notifications {
+	h2 {
+		margin: 10px;
+		background: #CCC;
+	}
+}
 /* FOOTER */
 footer {
 	position:relative;

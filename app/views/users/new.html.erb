@@ -1,0 +1,43 @@
+<div class="wrapper span8">
+<h1>Sign up you landlord you!</h1>
+
+<%= form_for @user do |f| %>
+	<!-- Errors? -->
+	<% if @user.errors.any? %>
+		<div class="error_messages">
+			<h2>Ooh! You just missed it!</h2>
+			<ul>
+				<% @user.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div class="field">
+		<%= f.label :email %>
+		<%= f.text_field :email, type: :email %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :password %>
+		<%= f.text_field :password, type: :password %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :password_confirmation %>
+		<%= f.text_field :password_confirmation, type: :password %>
+	</div>
+	
+	<%= f.fields_for :address do |address| %>
+        <%= render :partial => 'shared/address', :locals => {:f => address} %>
+    <% end %>
+
+	<div class="field">
+		<%= f.label :phone %>
+		<%= f.text_field :phone, type: :phone %>
+	</div>
+	
+	<div class="actions"><%= f.submit "Sign Up" %></div>
+<% end %>
+</div>

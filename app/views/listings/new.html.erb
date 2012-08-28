@@ -1,5 +1,8 @@
-<h1>New listing</h1>
+<h1>Step 2</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', listings_path %>
+<%= form_for @listing, :url => { :action => "new2" }, :class=> 'form' do |f| %>
+	<%= f.fields_for :address do |address| %>
+	    <%= render :partial => 'shared/address', :locals => {:f => address} %>
+	<% end %>
+	<div class="actions"><%= f.submit "Next", class: "btn btn-primary" %></div>
+<% end %>

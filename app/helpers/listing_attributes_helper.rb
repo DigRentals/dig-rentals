@@ -1,0 +1,2 @@
+module ListingAttributesHelper
+end

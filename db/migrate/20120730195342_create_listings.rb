@@ -7,7 +7,6 @@ class CreateListings < ActiveRecord::Migration
       t.float :bathrooms
       t.float :square_feet
       t.integer :type
-      t.integer :pets
       t.integer :lease_type
       t.string :property_desc
 

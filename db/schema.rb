@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730195342) do
+ActiveRecord::Schema.define(:version => 20120827214632) do
 
   create_table "addresses", :force => true do |t|
     t.string   "line1"
@@ -23,6 +23,19 @@ ActiveRecord::Schema.define(:version => 20120730195342) do
     t.string   "addressable_type"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "amenities", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "amenity_lists", :force => true do |t|
+    t.integer  "amenity_id", :null => false
+    t.integer  "listing_id", :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "listings", :force => true do |t|
@@ -37,6 +50,15 @@ ActiveRecord::Schema.define(:version => 20120730195342) do
     t.string   "property_desc"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "customCode"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "phone"
   end
 
 end

@@ -11,7 +11,7 @@
 <body>
 <div id='body-wrapper' class="container">
 <header>
-	<div id='header-normal' class='hidden-phone'>
+	<!-- <div id='header-normal' class='hidden-phone'>
 		<%= link_to root_path, class: :logo do %>
 			<div class='logo-icon'>
 				Dig Rentals
@@ -41,22 +41,31 @@
 						Q and A FAQs
 					</div>
 				<% end %>
-				
-				<%= link_to root_path, class: :account do %>
+				<%= link_to new_user_path, class: :account do %>
 					<div class='account-icon'>
 						Create Account
 					</div>
 				<% end %>
 			<% end %>
 		</div>
-	</div>
+	</div> -->
 	
-	<div id='header-mobile' class='visible-phone'>
+	<div id='header-mobile' class=''>
 		<%= link_to root_path, class: :logo do %>
 			<div class='mobile-icon'>
 				Dig Rentals
 			</div>
 		<% end %>
+		
+		<div class="creds">
+			<% if current_user %>
+				Logged in as <%= current_user.email %> - 
+				<%= link_to "Log Out", logout_path %>
+			<% else %>
+				<%= link_to "Log In", login_path %> or
+				<%= link_to "Sign Up", signup_path %>
+			<% end %>
+		</div>
 		
 		<% if false #@listingAddress %>
 			<%= link_to "http://maps.google.com/maps?q=" + Rack::Utils.escape(@listingAddress), class: "map-link" do %>
@@ -71,6 +80,16 @@
 		<% end %>
 	</div>
 </header>
+
+<div class="notifications">
+   <% if flash[:error].present? %>
+		<h2><%= flash[:error]%></h2>
+   <% end %>
+
+   <% if flash[:notice].present? %>
+		<h2><%= flash[:notice]%></h2>
+   <% end %>
+</div>
 
 <div class="center-wrapper">
 		<%= yield %>
